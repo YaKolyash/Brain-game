@@ -10,7 +10,7 @@ const getQuestionAndAnswer = () => {
     const correctAnswer = isEvenNumber(question) ? 'yes' : 'no';
 
     return [question, correctAnswer];
-}
+};
 
 export default () => {
     start(description, getQuestionAndAnswer);

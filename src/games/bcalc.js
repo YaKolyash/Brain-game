@@ -5,25 +5,25 @@ const operationSymbols = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRandomOperation = (symbols) => {
-    const symbolsLength = operationSymbols.length;
+    const symbolsLength = symbols.length;
     const randomIndex = random(0, symbolsLength);
     const randomSymbol = symbols[randomIndex];
 
     return randomSymbol;
-}
+};
 
-const calc = (symbol, firstNumber, secondNumber) => {
-    console.log(symbol);
-    if (symbol === '+') {
+const calc = (symbols, firstNumber, secondNumber) => {
+
+    if (symbols === '+') {
         return firstNumber + secondNumber;
-    } else if (symbol === '-') {
+    } else if (symbols === '-') {
         return firstNumber - secondNumber;
-    } else if (symbol === '*') {
+    } else if (symbols === '*') {
         return firstNumber * secondNumber;
     } else {
         return null;
     }
-}
+};
 
 const getQuestionAndAnswer = () => {
     const randomSymbol = getRandomOperation(operationSymbols);
@@ -31,10 +31,10 @@ const getQuestionAndAnswer = () => {
     const secondNumber = random(0, 100);
 
     const question = `${firstNumber} ${randomSymbol} ${secondNumber}`;
-    const correctAnswer = String(calc(randomSymbol, firstNumber, secondNumber))
+    const correctAnswer = String(calc(randomSymbol, firstNumber, secondNumber));
 
     return [question, correctAnswer];
-}
+};
 
 export default () => {
     start(description, getQuestionAndAnswer);

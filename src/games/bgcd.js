@@ -11,7 +11,7 @@ const getGreatestCommonDivisor = (firstItem, secondItem) => {
         return getGreatestCommonDivisor(firstItem - secondItem, secondItem);
     }
     return getGreatestCommonDivisor(firstItem, secondItem - firstItem);
-}
+};
 
 const getQuestionAndAnswer = () => {
     const firstNumber = random(0, 100);
@@ -21,7 +21,7 @@ const getQuestionAndAnswer = () => {
     const correctAnswer = String(getGreatestCommonDivisor(firstNumber, secondNumber));
 
     return [question, correctAnswer];
-}
+};
 
 export default () => {
     start(description, getQuestionAndAnswer);
