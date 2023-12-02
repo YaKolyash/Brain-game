@@ -18,8 +18,10 @@ const calc = (symbol, firstNumber, secondNumber) => {
         return firstNumber + secondNumber;
     } else if (symbol === '-') {
         return firstNumber - secondNumber;
-    } else {
+    } else if (symbol === '*') {
         return firstNumber * secondNumber;
+    } else {
+        return null;
     }
 };
 
