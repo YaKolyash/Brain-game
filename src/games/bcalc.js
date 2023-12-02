@@ -12,16 +12,14 @@ const getRandomOperation = (symbols) => {
     return randomSymbol;
 };
 
-const calc = (symbols, firstNumber, secondNumber) => {
+const calc = (symbol, firstNumber, secondNumber) => {
 
-    if (symbols === '+') {
+    if (symbol === '+') {
         return firstNumber + secondNumber;
-    } else if (symbols === '-') {
+    } else if (symbol === '-') {
         return firstNumber - secondNumber;
-    } else if (symbols === '*') {
-        return firstNumber * secondNumber;
     } else {
-        return null;
+        return firstNumber * secondNumber;
     }
 };
 
