@@ -5,7 +5,7 @@ const operationSymbols = ['+', '-', '*'];
 const description = 'What is the result of the expression?';
 
 const getRandomOperation = (symbols) => {
-    const symbolsLength = symbols.length;
+    const symbolsLength = symbols.length - 1;
     const randomIndex = random(0, symbolsLength);
     const randomSymbol = symbols[randomIndex];
 
@@ -13,7 +13,6 @@ const getRandomOperation = (symbols) => {
 };
 
 const calc = (symbol, firstNumber, secondNumber) => {
-
     if (symbol === '+') {
         return firstNumber + secondNumber;
     } else if (symbol === '-') {
@@ -39,3 +38,6 @@ const getQuestionAndAnswer = () => {
 export default () => {
     start(description, getQuestionAndAnswer);
 };
+
+
+
