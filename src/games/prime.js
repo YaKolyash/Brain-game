@@ -1,5 +1,5 @@
 import start from '../index.js';
-import { random } from '../function-random.js'
+import { random } from '../utils.js'
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 

@@ -1,5 +1,5 @@
 import start from '../index.js';
-import { random } from '../function-random.js'
+import { random } from '../utils.js'
 
 
 const progressionLength = 10;
@@ -19,7 +19,7 @@ const getArithmeticProgression = () => {
 
 const getQuestionAndAnswer = () => {
     const progression = getArithmeticProgression();
-    const randomIndex = random(0, progressionLength);
+    const randomIndex = random(0, progressionLength - 1);
 
     const correctAnswer = String(progression[randomIndex]);
     progression[randomIndex] = '..';

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import index from '../src/games/bprogression.js';
+import index from '../src/games/progression.js';
 
 index();

@@ -1,5 +1,5 @@
 import start from '../index.js';
-import { random } from '../function-random.js'
+import { random } from '../utils.js'
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
