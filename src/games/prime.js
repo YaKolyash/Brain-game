@@ -4,7 +4,13 @@ import { random } from '../utils.js'
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const isPrimeNumber = (num) => {
-    for (let i = 2; i < num; i += 1) {
+    if (num < 2) {
+        return false;
+    }
+
+    const maxDivider = Math.sqrt(num);
+
+    for (let i = 2; i < maxDivider; i += 1) {
         if (num % i === 0) {
             return false;
         }
