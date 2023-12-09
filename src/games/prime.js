@@ -10,7 +10,7 @@ const isPrimeNumber = (num) => {
 
     const maxDivider = Math.sqrt(num);
 
-    for (let i = 2; i < maxDivider; i += 1) {
+    for (let i = 2; i <= maxDivider; i += 1) {
         if (num % i === 0) {
             return false;
         }
