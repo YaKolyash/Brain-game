@@ -2,23 +2,22 @@ import start from '../index.js';
 import { random } from '../utils.js'
 
 
-const progressionLength = 10;
 const description = 'What number is missing in the progression?';
 
-const getArithmeticProgression = (min, step, progressionLength) => {
+const getArithmeticProgression = (min, randomIndex, progressionLength) => {
     const progression = [];
-    const currentMin = min;
-    const currentStep = step;
+    let currentMin = min;
 
     for (let i = 0; i < progressionLength; i += 1) {
         progression.push(currentMin);
-        currentMin += currentStep;
+        currentMin += randomIndex;
     }
 
     return progression;
 };
 
 const getQuestionAndAnswer = () => {
+    const progressionLength = 10;
     const numberProgression = random(0, 50);
     const randomIndex = random(0, progressionLength - 1);
     const progression = getArithmeticProgression(numberProgression, randomIndex, progressionLength);
