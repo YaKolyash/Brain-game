@@ -5,12 +5,10 @@ import { random } from '../utils.js'
 const description = 'What number is missing in the progression?';
 
 const getArithmeticProgression = (min, randomIndex, progressionLength) => {
-    const progression = [];
-    let currentMin = min;
+    const progression = [min];
 
     for (let i = 0; i < progressionLength; i += 1) {
-        progression.push(currentMin);
-        currentMin += randomIndex;
+        progression.push(progression[i] + randomIndex);
     }
 
     return progression;
