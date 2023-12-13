@@ -2,6 +2,7 @@
 
   plugins:
 - jest
+- '@stylistic/js'
 
 # https://eslint.org/docs/user-guide/configuring#specifying-environments
 env:
