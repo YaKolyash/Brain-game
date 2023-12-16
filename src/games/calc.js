@@ -1,5 +1,5 @@
 import start from '../index.js';
-import { random } from '../utils.js';
+import random from '../utils.js';
 
 const operationSymbols = ['+', '-', '*'];
 const description = 'What is the result of the expression?';

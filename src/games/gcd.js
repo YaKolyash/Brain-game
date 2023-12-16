@@ -1,5 +1,5 @@
 import start from '../index.js';
-import { random } from '../utils.js';
+import random from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers';
 
