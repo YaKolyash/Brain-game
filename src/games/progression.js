@@ -15,10 +15,10 @@ const getArithmeticProgression = (start, step, progressionLength) => {
 
 const getQuestionAndAnswer = () => {
   const progressionLength = 10;
-  const start = random(0, 50);
+  const begin = random(0, 50);
   const step = random(1, 10);
   const hiddenNumberIndex = random(0, progressionLength - 1);
-  const progression = getArithmeticProgression(start, step, progressionLength);
+  const progression = getArithmeticProgression(begin, step, progressionLength);
 
   const correctAnswer = String(progression[hiddenNumberIndex]);
   progression[hiddenNumberIndex] = '..';
