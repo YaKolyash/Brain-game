@@ -3,11 +3,11 @@ import random from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const getArithmeticProgression = (min, step, progressionLength) => {
-  const progression = [min];
+const getArithmeticProgression = (start, step, progressionLength) => {
+  const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(progression[i] + step);
+    progression.push(start + (step * i));
   }
 
   return progression;
@@ -15,13 +15,13 @@ const getArithmeticProgression = (min, step, progressionLength) => {
 
 const getQuestionAndAnswer = () => {
   const progressionLength = 10;
-  const numberProgression = random(0, 50);
-  const step = random(0, 10);
-  const randomIndex = random(0, progressionLength - 1);
-  const progression = getArithmeticProgression(numberProgression, step, progressionLength);
+  const start = random(0, 50);
+  const step = random(1, 10);
+  const hiddenNumberIndex = random(0, progressionLength - 1);
+  const progression = getArithmeticProgression(start, step, progressionLength);
 
-  const correctAnswer = String(progression[randomIndex]);
-  progression[randomIndex] = '..';
+  const correctAnswer = String(progression[hiddenNumberIndex]);
+  progression[hiddenNumberIndex] = '..';
   const question = progression.join(' ');
 
   return [question, correctAnswer];
