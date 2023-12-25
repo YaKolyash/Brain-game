@@ -3,11 +3,11 @@ import random from '../utils.js';
 
 const description = 'What number is missing in the progression?';
 
-const getArithmeticProgression = (start, step, progressionLength) => {
+const getArithmeticProgression = (first, step, progressionLength) => {
   const progression = [];
 
   for (let i = 0; i < progressionLength; i += 1) {
-    progression.push(start + (step * i));
+    progression.push(first + (step * i));
   }
 
   return progression;
